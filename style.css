@@ -1,0 +1,83 @@
+
+:root {
+  --bg-color: #f0f8ff;
+  --text-color: #333;
+  --card-bg: white;
+  --primary: #00bfff;
+}
+body {
+  font-family: 'Times New Roman', serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.4s ease;
+}
+body.dark-mode {
+  --bg-color: #111;
+  --text-color: #eee;
+  --card-bg: #1e1e1e;
+}
+.nav {
+  background-color: #87ceeb;
+  padding: 1rem;
+  text-align: center;
+}
+.nav .logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+.section {
+  padding: 2rem;
+  text-align: center;
+}
+.card {
+  background: var(--card-bg);
+  margin: 1.5rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+  max-width: 800px;
+  transform: perspective(800px) rotateX(0deg);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.card:hover {
+  transform: perspective(800px) rotateX(5deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.toggle-dark {
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  background: #00bfff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
