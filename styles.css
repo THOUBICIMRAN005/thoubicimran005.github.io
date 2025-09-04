@@ -624,6 +624,47 @@ body {
 
 
 /* ===== Projects Section ===== */
+/* Container for the buttons */
+.project-buttons {
+    display: flex;
+    gap: 15px; /* Adds space between buttons */
+    margin-top: 20px;
+}
+
+/* Base styling for all buttons */
+.project-buttons a {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* GitHub button specific styling */
+.github-button {
+    background-color: #333; /* GitHub's color */
+}
+
+.github-button:hover {
+    background-color: #555;
+}
+
+/* Streamlit button specific styling */
+.streamlit-button {
+    background-color: #FF4B4B; /* Streamlit's red color */
+}
+
+.streamlit-button:hover {
+    background-color: #e54242;
+}
+
+/* Spacing for the icons */
+.project-buttons a i {
+    margin-right: 8px;
+}
 .project-filters {
     text-align: center;
     margin-bottom: 40px;
@@ -1205,4 +1246,5 @@ footer {
         min-width: unset;
         padding: 25px;
     }
+
 }
