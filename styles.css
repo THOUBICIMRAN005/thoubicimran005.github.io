@@ -362,25 +362,28 @@ p, li {
 .achievements-list {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    margin: 1rem 0;
+    gap: 0.75rem; /* Increased spacing for better readability */
+    margin: 1rem 0 0 0; /* Add top margin for separation, remove others */
     list-style: none;
     padding: 0;
+    width: 100%; /* CRITICAL FIX: Ensures the <ul> stretches to 100% */
 }
 
+/* Achievement Item: Ensure each item within the list stretches and aligns correctly */
 .achievement-item {
     display: flex;
-    align-items: flex-start; /* Ensures icon is at the top of the text */
-    gap: 0.5rem;
+    align-items: flex-start; /* Ensures the icon aligns with the first line of text */
+    gap: 0.75rem;
+    width: 100%; /* CRITICAL FIX: Ensures each <li> element is full width */
+    text-align: left; /* Ensures the text starts cleanly at the left edge */
 }
 
 .achievement-item i {
     color: var(--primary);
-    font-size: 0.875rem;
+    font-size: 0.95rem; /* Slightly larger icon */
     margin-top: 0.2rem;
-    flex-shrink: 0;
+    flex-shrink: 0; /* Prevents the icon from shrinking on smaller screens */
 }
-
 /* ===== SKILLS SECTION (Grid and Card Alignment) ===== */
 .skills-container {
     display: grid;
@@ -520,3 +523,4 @@ p, li {
         text-align: left;
     }
 }
+
